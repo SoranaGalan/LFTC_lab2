@@ -1,0 +1,15 @@
+function isprime ( n ) : boolean {
+    if n <= 1 then : { return False ; }
+    for integer i = 2 to n then : { if n % i == 0 then : { return False ; } }
+    return True ;
+}
+function printprime ( n ) : string {
+    for integer i = 2 to n + 1 then : {
+        if isprime ( i ) then : { displayoutput ( i , " " ) ; }
+    }
+}
+program : {
+    var n : integer ;
+    getinput : n ;
+    printprime ( n ) ;
+}
